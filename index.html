@@ -344,11 +344,14 @@ header{background:#fff;border-bottom:1px solid #e5e7eb;height:56px;display:flex;
         </div>
       </div>
 
-      <div class="alert-bcp" style="background:#f8f7fb;border-color:#e2dff0;">
-        <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0;">
-          <span style="background:#f59e0b;color:#fff;font-size:9px;font-weight:900;padding:3px 8px;border-radius:3px;white-space:nowrap;">INFO</span>
-          <p class="alert-text" style="color:#6b5794;">BCP策定支援サービス（別途オプション）をご検討の方は <button style="background:none;border:none;color:#6b5794;text-decoration:underline;font-weight:700;cursor:pointer;font-size:12px;" onclick="alert('BCP策定支援の詳細ページへ遷移します')">こちら</button></p>
+      <!-- BCP INFO バナー(2026-05-02 §41 CEO 確定文言) -->
+      <div style="background:linear-gradient(135deg,#1e293b,#334155);border-radius:10px;padding:16px 20px;margin-bottom:16px;color:#fff;display:flex;align-items:center;gap:16px;">
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:10px;color:#fbbf24;font-weight:700;letter-spacing:.5px;margin-bottom:4px;">⚡ 今日やるべきアクション</div>
+          <div style="font-size:15px;font-weight:900;color:#fff;margin-bottom:4px;">BCP（事業継続計画）未策定！</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.75);line-height:1.5;">災害時、医療機関は患者の命と、スタッフの安全を守る責任があります</div>
         </div>
+        <button style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;border:none;border-radius:8px;padding:10px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 3px 12px rgba(245,158,11,.3);white-space:nowrap;" onclick="setPage('bcp')">BCP策定支援を見る</button>
       </div>
 
       <!-- ═══ TODAY'S ACTION (FREE visible) ═══ -->
@@ -360,6 +363,139 @@ header{background:#fff;border-bottom:1px solid #e5e7eb;height:56px;display:flex;
         </div>
         <button class="btn-primary" style="flex-shrink:0;font-size:12px;padding:10px 20px;" onclick="setPage('profile')">プロフィールを更新</button>
       </div>
+
+      <!-- ═══ ROW 2: 強み/弱み 水平バー（4軸版・2026-05-02 §41 CEO 確定） ═══ -->
+      <section class="sc">
+        <div class="sc-hd">
+          <h3>自院 vs 港区平均 — 強み/弱み分析</h3>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <span style="display:flex;align-items:center;gap:4px;font-size:10px;color:#555;"><span style="width:16px;height:8px;background:#1e3a8a;border-radius:2px;display:inline-block;"></span>自院</span>
+            <span style="display:flex;align-items:center;gap:4px;font-size:10px;color:#555;"><span style="width:16px;height:8px;background:#dc2626;border-radius:2px;display:inline-block;"></span>要改善</span>
+            <span style="display:flex;align-items:center;gap:4px;font-size:10px;color:#f59e0b;"><span style="width:2px;height:12px;background:#f59e0b;display:inline-block;"></span>港区平均</span>
+          </div>
+        </div>
+        <div style="padding:16px;">
+          <div id="strengthBars" style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:grid;grid-template-columns:140px 1fr 120px;align-items:center;gap:14px;">
+              <div style="font-size:12px;font-weight:700;color:#374151;">総合評価スコア<span style="background:#dcfce7;color:#166534;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;">強み</span></div>
+              <div style="position:relative;height:22px;background:#f0f0f0;border-radius:11px;overflow:visible;">
+                <div style="position:absolute;top:0;left:0;height:100%;width:98%;background:linear-gradient(90deg,#1e3a8a,#3b82f6);border-radius:11px;box-shadow:0 2px 6px rgba(0,0,0,.1);transition:width .8s ease;"></div>
+                <div style="position:absolute;top:-3px;left:68.4%;width:2px;height:28px;background:#f59e0b;border-radius:1px;z-index:2;"></div>
+              </div>
+              <div style="font-size:12px;text-align:right;"><span style="font-weight:900;color:#1e3a8a;font-size:14px;">98pt</span> <span style="color:#9ca3af;font-size:10px;">/ 平均68.4</span></div>
+            </div>
+            <div style="display:grid;grid-template-columns:140px 1fr 120px;align-items:center;gap:14px;">
+              <div style="font-size:12px;font-weight:700;color:#374151;">改善報告率<span style="background:#dcfce7;color:#166534;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;">強み</span></div>
+              <div style="position:relative;height:22px;background:#f0f0f0;border-radius:11px;overflow:visible;">
+                <div style="position:absolute;top:0;left:0;height:100%;width:95%;background:linear-gradient(90deg,#1e3a8a,#3b82f6);border-radius:11px;box-shadow:0 2px 6px rgba(0,0,0,.1);transition:width .8s ease;"></div>
+                <div style="position:absolute;top:-3px;left:75%;width:2px;height:28px;background:#f59e0b;border-radius:1px;z-index:2;"></div>
+              </div>
+              <div style="font-size:12px;text-align:right;"><span style="font-weight:900;color:#1e3a8a;font-size:14px;">95%</span> <span style="color:#9ca3af;font-size:10px;">/ 平均75</span></div>
+            </div>
+            <div style="display:grid;grid-template-columns:140px 1fr 120px;align-items:center;gap:14px;">
+              <div style="font-size:12px;font-weight:700;color:#374151;">医療機器設備<span style="background:#dcfce7;color:#166534;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;">強み</span></div>
+              <div style="position:relative;height:22px;background:#f0f0f0;border-radius:11px;overflow:visible;">
+                <div style="position:absolute;top:0;left:0;height:100%;width:100%;background:linear-gradient(90deg,#1e3a8a,#3b82f6);border-radius:11px;box-shadow:0 2px 6px rgba(0,0,0,.1);transition:width .8s ease;"></div>
+                <div style="position:absolute;top:-3px;left:60%;width:2px;height:28px;background:#f59e0b;border-radius:1px;z-index:2;"></div>
+              </div>
+              <div style="font-size:12px;text-align:right;"><span style="font-weight:900;color:#1e3a8a;font-size:14px;">100pt</span> <span style="color:#9ca3af;font-size:10px;">/ 平均60</span></div>
+            </div>
+            <div style="display:grid;grid-template-columns:140px 1fr 120px;align-items:center;gap:14px;">
+              <div style="font-size:12px;font-weight:700;color:#374151;">顧客満足度<span style="background:#dcfce7;color:#166534;font-size:9px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:6px;">強み</span></div>
+              <div style="position:relative;height:22px;background:#f0f0f0;border-radius:11px;overflow:visible;">
+                <div style="position:absolute;top:0;left:0;height:100%;width:93%;background:linear-gradient(90deg,#1e3a8a,#3b82f6);border-radius:11px;box-shadow:0 2px 6px rgba(0,0,0,.1);transition:width .8s ease;"></div>
+                <div style="position:absolute;top:-3px;left:75%;width:2px;height:28px;background:#f59e0b;border-radius:1px;z-index:2;"></div>
+              </div>
+              <div style="font-size:12px;text-align:right;"><span style="font-weight:900;color:#1e3a8a;font-size:14px;">93pt</span> <span style="color:#9ca3af;font-size:10px;">/ 平均75</span></div>
+            </div>
+          </div>
+          <div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0f0f0;">
+            <p style="font-size:11px;line-height:1.7;"><span style="color:#16a34a;font-weight:700;">✦ 最大の強み:</span> 医療機器設備 +66.7% — 港区平均60に対し100pt</p>
+            <p style="font-size:11px;line-height:1.7;"><span style="color:#dc2626;font-weight:700;">⚠ 最大の改善点:</span> 顧客満足度 +24.0% — 平均比が4軸中で最も小さい(平均75に対し93pt)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ ROW 3: 医師個別ブロック - 医師間評価（DB v11 §10-2 確定 8部門・白背景・横長・8票投票） ═══ -->
+      <section class="sc">
+        <div class="sc-hd">
+          <h3>医師間評価 — 大賞アワード得票状況</h3>
+          <div style="display:flex;gap:6px;" id="doctorTabs">
+            <button class="ishi-tab active" onclick="switchDoctor(this, '山田太郎(院長)')" style="background:#1e3a8a;color:#fff;border:none;border-radius:4px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;">山田太郎(院長)</button>
+            <button class="ishi-tab" onclick="switchDoctor(this, '佐藤花子')" style="background:#f3f4f6;color:#374151;border:none;border-radius:4px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;">佐藤花子</button>
+            <button class="ishi-tab" onclick="switchDoctor(this, '鈴木一郎')" style="background:#f3f4f6;color:#374151;border:none;border-radius:4px;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;">鈴木一郎</button>
+          </div>
+        </div>
+        <div style="padding:16px;">
+          <div style="background:#f9fafb;border-radius:6px;padding:14px 16px;margin-bottom:14px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:center;">
+            <div>
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:2px;">選択中の医師</div>
+              <div style="font-size:14px;font-weight:900;color:#1e3a8a;" id="selectedDoctorName">山田太郎(院長)</div>
+            </div>
+            <div style="text-align:center;border-left:1px solid #e5e7eb;border-right:1px solid #e5e7eb;">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:2px;">港区順位(全部門合算)</div>
+              <div style="font-size:22px;font-weight:900;color:#16a34a;line-height:1.1;">3<span style="font-size:13px;font-weight:700;">位</span> <span style="font-size:11px;color:#9ca3af;font-weight:500;">/ 24名中</span></div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:2px;">合計獲得票数</div>
+              <div style="font-size:18px;font-weight:900;color:#1e3a8a;">23票 <span style="font-size:10px;color:#9ca3af;font-weight:500;">/ 港区18名から</span></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px 12px;text-align:center;" data-category="newcomer">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:8px;line-height:1.3;">新人35歳以下</div>
+              <div style="font-size:28px;font-weight:900;color:#1e3a8a;line-height:1;">6</div>
+              <div style="font-size:10px;color:#9ca3af;margin-top:2px;font-weight:700;">票獲得</div>
+            </div>
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px 12px;text-align:center;" data-category="pediatric">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:8px;line-height:1.3;">小児歯科</div>
+              <div style="font-size:28px;font-weight:900;color:#1e3a8a;line-height:1;">2</div>
+              <div style="font-size:10px;color:#9ca3af;margin-top:2px;font-weight:700;">票獲得</div>
+            </div>
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px 12px;text-align:center;" data-category="orthodontic">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:8px;line-height:1.3;">矯正歯科</div>
+              <div style="font-size:28px;font-weight:900;color:#9ca3af;line-height:1;">0</div>
+              <div style="font-size:10px;color:#9ca3af;margin-top:2px;font-weight:700;">票</div>
+            </div>
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px 12px;text-align:center;" data-category="female">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:8px;line-height:1.3;">女性医師</div>
+              <div style="font-size:28px;font-weight:900;color:#9ca3af;line-height:1;">0</div>
+              <div style="font-size:10px;color:#9ca3af;margin-top:2px;font-weight:700;">票</div>
+            </div>
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px 12px;text-align:center;" data-category="advanced">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:8px;line-height:1.3;">先進治療</div>
+              <div style="font-size:28px;font-weight:900;color:#1e3a8a;line-height:1;">5</div>
+              <div style="font-size:10px;color:#9ca3af;margin-top:2px;font-weight:700;">票獲得</div>
+            </div>
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px 12px;text-align:center;" data-category="implant">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:8px;line-height:1.3;">インプラント</div>
+              <div style="font-size:28px;font-weight:900;color:#1e3a8a;line-height:1;">4</div>
+              <div style="font-size:10px;color:#9ca3af;margin-top:2px;font-weight:700;">票獲得</div>
+            </div>
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px 12px;text-align:center;" data-category="oral_surgery">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:8px;line-height:1.3;">口腔外科</div>
+              <div style="font-size:28px;font-weight:900;color:#1e3a8a;line-height:1;">3</div>
+              <div style="font-size:10px;color:#9ca3af;margin-top:2px;font-weight:700;">票獲得</div>
+            </div>
+            <div style="background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px 12px;text-align:center;" data-category="best_doctor">
+              <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:8px;line-height:1.3;">ベストドクター</div>
+              <div style="font-size:28px;font-weight:900;color:#1e3a8a;line-height:1;">3</div>
+              <div style="font-size:10px;color:#9ca3af;margin-top:2px;font-weight:700;">票獲得</div>
+            </div>
+          </div>
+          <div style="margin-top:14px;padding:12px 14px;background:#f9fafb;border-radius:6px;border:1px solid #f0f0f0;">
+            <div style="font-size:10px;color:#6b7280;font-weight:700;margin-bottom:6px;">医師間評価について</div>
+            <ul style="font-size:11px;line-height:1.7;color:#6b7280;margin:0;padding-left:18px;">
+              <li>年1回の大賞アワード期間中、港区の歯科医師同士で投票</li>
+              <li>1医師=8部門×各1票=計8票(全部門に投票しなくても可)</li>
+              <li>同医院・同グループ間の投票は無効・自己投票も無効</li>
+              <li>投票医師の個人名は表示されません(個人名秘匿)</li>
+              <li>港区順位は全部門合算の有効得票数で計算</li>
+              <li>得票0の医師はこのブロック自体が非表示</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <!-- ═══ ROW 1: アクセス推移 + タスク ═══ -->
       <div class="g2">
@@ -1218,7 +1354,19 @@ trendChart('trendChurn',[32,38,42,48,56,68],'#fb7185','rgba(251,113,133,0.25)','
   ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:DTIP},scales:{x:{display:false},y:{display:false,min:0,max:100}}}});
 })();
 
-
+// 医師個別ブロック - 医師タブ切替
+function switchDoctor(btnEl, doctorName) {
+  document.querySelectorAll('.ishi-tab').forEach(function(b){
+    b.classList.remove('active');
+    b.style.background = '#f3f4f6';
+    b.style.color = '#374151';
+  });
+  btnEl.classList.add('active');
+  btnEl.style.background = '#1e3a8a';
+  btnEl.style.color = '#fff';
+  var nameEl = document.getElementById('selectedDoctorName');
+  if (nameEl) nameEl.textContent = doctorName;
+}
 
 </script>
 </body>
