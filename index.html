@@ -373,25 +373,107 @@ header{background:#fff;border-bottom:1px solid #e5e7eb;height:56px;display:flex;
             <p style="font-size:11px;color:#e11d48;font-weight:700;margin-top:10px;">📈 結論: 予約獲得数は6ヶ月で3.2倍に成長。しかし予約導線がないため、12件のリクエストが予約に転換できていません。</p>
           </div>
         </section>
-        <section class="sc" style="display:flex;flex-direction:column;">
-          <div class="sc-hd"><h3>運用タスク＆リマインド</h3></div>
-          <div class="tr"><div class="tr-left"><span class="badge badge-red">重要</span><span>未承認資格の証明書をアップロード</span></div><button class="tlink" onclick="setPage('certs')">対応</button></div>
-          <div class="tr"><div class="tr-left"><span class="badge badge-gray">Task</span><span>休日対応スケジュールが未登録</span></div><button class="tlink" onclick="setPage('schedule')">登録</button></div>
-          <div class="tr" style="gap:8px;"><span class="badge badge-gray" style="flex-shrink:0;">Info</span><span style="white-space:nowrap;">プロフィール完成度：</span><div class="prog-row"><div class="prog-track"><div class="prog-fill" style="width:92%;"></div></div><span style="font-size:12px;font-weight:700;white-space:nowrap;">92%</span></div></div>
-          <!-- ── 情報透明性スコア ── -->
-          <div style="padding:14px 16px;border-top:1px solid #e5e7eb;">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-              <span class="badge badge-red">要改善</span>
-              <span style="font-size:12px;font-weight:800;color:#1f2937;">情報透明性スコア: <span style="color:#dc2626;">× 0.8</span><span style="color:#9ca3af;font-weight:500;font-size:10px;margin-left:4px;">（ペナルティ中）</span></span>
+        <section class="sc" style="display:flex;flex-direction:column;background:#faf8f5;border-radius:24px;padding:28px;">
+          <div style="text-align:center;margin-bottom:8px;">
+            <p style="font-size:11px;letter-spacing:0.2em;color:#d4537e;margin:0;font-weight:500;">DAILY TASKS</p>
+          </div>
+          <h3 style="text-align:center;font-size:22px;font-weight:500;margin:0 0 28px;color:#2c2c2a;letter-spacing:-0.01em;">
+            今日の運用タスク&<span style="background:linear-gradient(90deg,#f0849a,#c49dd8,#5ec8e6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">リマインド</span>
+          </h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+
+            <div style="background:#ffffff;border-radius:18px;padding:18px 20px;display:flex;align-items:center;gap:14px;border:0.5px solid rgba(0,0,0,0.06);">
+              <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#fde2e8,#fbd0d9);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:11px;font-weight:600;color:#c2185b;letter-spacing:0.05em;">01</span>
+              </div>
+              <div style="flex:1;">
+                <p style="font-size:11px;color:#d4537e;margin:0 0 2px;font-weight:500;letter-spacing:0.05em;">重要</p>
+                <p style="font-size:14px;margin:0;color:#2c2c2a;font-weight:500;">未承認資格の証明書をアップロード</p>
+              </div>
+              <button onclick="setPage('certs')" style="background:linear-gradient(135deg,#f0849a,#c49dd8);color:#ffffff;border:none;padding:8px 18px;border-radius:999px;font-size:12px;font-weight:500;cursor:pointer;">対応 →</button>
             </div>
-            <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;padding-left:4px;">
-              <div style="font-size:11px;display:flex;align-items:center;gap:6px;color:#dc2626;font-weight:600;">❌ 料金目安の明示 <span style="color:#9ca3af;font-weight:400;">(未記載)</span></div>
-              <div style="font-size:11px;display:flex;align-items:center;gap:6px;color:#dc2626;font-weight:600;">❌ リスク・副作用 <span style="color:#9ca3af;font-weight:400;">(未記載)</span></div>
-              <div style="font-size:11px;display:flex;align-items:center;gap:6px;color:#16a34a;font-weight:600;">✅ 保証制度の明記</div>
+
+            <div style="background:#ffffff;border-radius:18px;padding:18px 20px;display:flex;align-items:center;gap:14px;border:0.5px solid rgba(0,0,0,0.06);">
+              <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#f1efe8,#e8e6dc);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:11px;font-weight:600;color:#5f5e5a;letter-spacing:0.05em;">02</span>
+              </div>
+              <div style="flex:1;">
+                <p style="font-size:11px;color:#888780;margin:0 0 2px;font-weight:500;letter-spacing:0.05em;">タスク</p>
+                <p style="font-size:14px;margin:0;color:#2c2c2a;font-weight:500;">休日対応スケジュールが未登録</p>
+              </div>
+              <button onclick="setPage('schedule')" style="background:#ffffff;color:#2c2c2a;border:1px solid #d3d1c7;padding:8px 18px;border-radius:999px;font-size:12px;font-weight:500;cursor:pointer;">登録 →</button>
             </div>
-            <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px;padding:10px 12px;">
-              <p style="font-size:11px;color:#1e40af;font-weight:700;line-height:1.7;">💡 全項目を満たすとスコアが <span style="color:#dc2626;text-decoration:line-through;">× 0.8</span> → <span style="background:#dcfce7;color:#166534;padding:1px 6px;border-radius:3px;font-size:12px;">× 1.2 (+40%)</span> に大幅ブーストされます。<br>現在の検索順位: <b>エリア3位</b> → <b style="color:#dc2626;">推定1位圏内に浮上</b> する見込みです。</p>
+
+            <div style="background:#ffffff;border-radius:18px;padding:18px 20px;border:0.5px solid rgba(0,0,0,0.06);">
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:10px;">
+                <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#e6f1fb,#d4e8f8);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <span style="font-size:11px;font-weight:600;color:#185fa5;letter-spacing:0.05em;">03</span>
+                </div>
+                <div style="flex:1;">
+                  <p style="font-size:11px;color:#378add;margin:0 0 2px;font-weight:500;letter-spacing:0.05em;">プロフィール完成度</p>
+                  <p style="font-size:14px;margin:0;color:#2c2c2a;font-weight:500;">あと8%で100%</p>
+                </div>
+                <span style="font-size:22px;font-weight:500;color:#2c2c2a;">92<span style="font-size:13px;color:#888780;">%</span></span>
+              </div>
+              <div style="height:8px;background:#f1efe8;border-radius:4px;overflow:hidden;">
+                <div style="width:92%;height:100%;background:linear-gradient(90deg,#87CEEB,#5ec8e6);border-radius:4px;"></div>
+              </div>
             </div>
+
+            <div style="background:linear-gradient(135deg,#fef5f8,#f5e8f5,#e8f4fb);border-radius:18px;padding:22px;border:0.5px solid rgba(212,83,126,0.15);">
+              <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:14px;">
+                <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#f0849a,#c49dd8);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <span style="font-size:11px;font-weight:600;color:#ffffff;letter-spacing:0.05em;">04</span>
+                </div>
+                <div style="flex:1;">
+                  <p style="font-size:11px;margin:0 0 2px;font-weight:500;letter-spacing:0.05em;background:linear-gradient(90deg,#d4537e,#9d4ec0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">挑戦 — 情報透明性</p>
+                  <p style="font-size:14px;margin:0;color:#2c2c2a;font-weight:500;">あと1項目で +20% ブースト獲得</p>
+                </div>
+                <div style="text-align:right;">
+                  <span style="font-size:28px;font-weight:500;background:linear-gradient(135deg,#d4537e,#9d4ec0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">2</span>
+                  <span style="font-size:14px;color:#888780;font-weight:500;"> / 6</span>
+                </div>
+              </div>
+              <div style="height:8px;background:rgba(255,255,255,0.7);border-radius:4px;overflow:hidden;margin-bottom:18px;">
+                <div style="width:33%;height:100%;background:linear-gradient(90deg,#f0849a,#c49dd8,#5ec8e6);border-radius:4px;"></div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px;">
+                <div style="background:#ffffff;border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:8px;">
+                  <span style="display:inline-block;width:18px;height:18px;background:linear-gradient(135deg,#97c459,#639922);border-radius:50%;color:#ffffff;text-align:center;line-height:18px;font-size:11px;font-weight:600;">✓</span>
+                  <span style="font-size:11px;color:#2c2c2a;font-weight:500;">リスク・副作用</span>
+                </div>
+                <div style="background:#ffffff;border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:8px;">
+                  <span style="display:inline-block;width:18px;height:18px;background:linear-gradient(135deg,#97c459,#639922);border-radius:50%;color:#ffffff;text-align:center;line-height:18px;font-size:11px;font-weight:600;">✓</span>
+                  <span style="font-size:11px;color:#2c2c2a;font-weight:500;">設備・機器</span>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:8px;">
+                  <span style="display:inline-block;width:18px;height:18px;background:#f1efe8;border-radius:50%;color:#888780;text-align:center;line-height:18px;font-size:11px;">○</span>
+                  <span style="font-size:11px;color:#888780;font-weight:500;">料金(自由診療)</span>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:8px;">
+                  <span style="display:inline-block;width:18px;height:18px;background:#f1efe8;border-radius:50%;color:#888780;text-align:center;line-height:18px;font-size:11px;">○</span>
+                  <span style="font-size:11px;color:#888780;font-weight:500;">症例画像</span>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:8px;">
+                  <span style="display:inline-block;width:18px;height:18px;background:#f1efe8;border-radius:50%;color:#888780;text-align:center;line-height:18px;font-size:11px;">○</span>
+                  <span style="font-size:11px;color:#888780;font-weight:500;">緊急時連絡先</span>
+                </div>
+                <div style="background:rgba(255,255,255,0.6);border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:8px;">
+                  <span style="display:inline-block;width:18px;height:18px;background:#f1efe8;border-radius:50%;color:#888780;text-align:center;line-height:18px;font-size:11px;">○</span>
+                  <span style="font-size:11px;color:#888780;font-weight:500;">待ち時間</span>
+                </div>
+              </div>
+              <div style="background:rgba(255,255,255,0.7);border-radius:12px;padding:14px 16px;">
+                <p style="font-size:11px;color:#888780;margin:0 0 6px;font-weight:500;letter-spacing:0.05em;">期待される効果</p>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                  <span style="font-size:13px;color:#2c2c2a;font-weight:500;">エリア</span>
+                  <span style="background:#f1efe8;padding:3px 10px;border-radius:999px;font-size:12px;color:#5f5e5a;font-weight:500;">3位</span>
+                  <span style="font-size:13px;color:#888780;">→</span>
+                  <span style="background:linear-gradient(135deg,#f0849a,#c49dd8);padding:3px 10px;border-radius:999px;font-size:12px;color:#ffffff;font-weight:500;">推定1位圏内</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </div>
